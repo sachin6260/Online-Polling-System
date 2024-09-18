@@ -1,0 +1,380 @@
+/* General styles for the app */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar h1 {
+  margin: 0;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar ul li {
+  margin-right: 20px;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar ul li a:hover {
+  text-decoration: underline;
+}
+
+/* HomePage styles */
+.homepage {
+  text-align: center;
+ }
+ h2{
+  margin-left: 30px;
+ }
+ 
+.poll-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.poll-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.poll-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.poll-item h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+.poll-item button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.poll-item button:hover {
+  background-color: #45a049;
+}
+
+/* CreatePollPage styles */
+.create-poll-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.create-poll-page form {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+}
+
+.create-poll-page label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.create-poll-page input,
+.create-poll-page button {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.create-poll-page button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.create-poll-page button:hover {
+  background-color: #45a049;
+}
+
+/* PollDetailPage styles */
+.poll-detail-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.poll-detail {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.poll-detail h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+.poll-detail button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.poll-detail button:hover {
+  background-color: #45a049;
+}
+/* Result Chart Styles */
+.result-chart {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.result-chart h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.result-chart .result-bar {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 10px 0;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.result-chart .result-bar span {
+  font-size: 1rem;
+  color: #555;
+  flex: 1;
+}
+
+.result-chart .result-bar .bar-container {
+  flex: 3;
+  background-color: #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.result-chart .result-bar .bar {
+  background-color: #4caf50;
+  height: 20px;
+  border-radius: 5px;
+  text-align: center;
+  color: #fff;
+  line-height: 20px;
+  font-size: 0.9rem;
+  transition: width 0.5s ease-in-out;
+}
+
+.result-chart .result-bar .bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 4px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Poll Card Styles */
+.poll-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin: 10px;
+}
+
+.poll-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.poll-card h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.poll-card p {
+  color: #555;
+}
+
+.poll-card button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.poll-card button:hover {
+  background-color: #45a049;
+}
+
+.poll-card .option-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.poll-card .option-list li {
+  margin-bottom: 10px;
+}
+
+
+/* Poll Detail Page Styles */
+.poll-detail-page {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.poll-detail-page h2 {
+  margin-top: 0;
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+}
+
+.poll-detail-page ul {
+  list-style-type: none;
+   margin: 0;
+}
+
+.poll-detail-page li {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  gap: 30px;
+}
+
+.poll-detail-page li button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+.poll-detail-page li button:hover {
+  background-color: #45a049;
+}
+
+.poll-detail-page li .fa-check-circle {
+  color: #4caf50;
+  margin-right: 10px;
+}
+
+.poll-detail-page li .fa-vote-yea {
+  margin-left: 10px;
+}
+
+.poll-detail-page h3 {
+  margin-top: 30px;
+  font-size: 1.5rem;
+  color: #333;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar ul li {
+    margin-bottom: 10px;
+  }
+
+  .poll-item {
+    width: 100%;
+  }
+}
